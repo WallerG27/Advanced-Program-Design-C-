@@ -1,0 +1,59 @@
+Password: hunter2 - WEAK
+Missing: Minimum Length
+Missing: Uppercase Letter
+Missing: Special Character
+Password: Sunshine - WEAK
+Missing: Number
+Missing: Special Character
+Password: Sun$hine9 - STRONG
+Password: P@ssw0rd - STRONG
+Password: abc123 - WEAK
+Missing: Minimum Length
+Missing: Uppercase Letter
+Missing: Special Character
+Password: StrongPass1! - STRONG
+Password: MyDogRex - WEAK
+Missing: Number
+Missing: Special Character
+Password: 12345678! - WEAK
+Missing: Uppercase Letter
+Missing: Lowercase Letter
+Password: SecureMe2024$ - STRONG
+Password: Qwerty! - WEAK
+Missing: Minimum Length
+Missing: Number
+Password: Th3BestDay#Ever - STRONG
+Password: openSesame22 - WEAK
+Missing: Special Character
+Password: LetMeIn2023! - STRONG
+Password: !WafflesAreYum77 - STRONG
+Password: F!reDr@gon_9000 - STRONG
+Password: 5uper$ecretKey!! - STRONG
+Password: LunaMoon2025! - STRONG
+Password: TotallyNotMyPass123 - WEAK
+Missing: Special Character
+Password: myCat'sNameIsLoki - WEAK
+Missing: Number
+Password: BlueSky$&Rainbows - WEAK
+Missing: Number
+Password: Just4Fun:) - STRONG
+Password: Pl34seW0rk! - STRONG
+Password: Y@Y0uC@ntGuessThis! - STRONG
+Password: R3dWh@le_On_The_Run - STRONG
+Password: Dolphin!42&Ocean* - STRONG
+Password: Tricky$Monkey007 - STRONG
+Password: A1waysL@te2Class - STRONG
+Password: CoffeeAddict1999! - STRONG
+Password: Wint3r!sH3re# - STRONG
+Password: RunF0r3st_Run! - STRONG
+Password: N0p3NotThisOne! - STRONG
+Password: I<3MyJob2022 - STRONG
+Password: 404NotAFriend! - STRONG
+Password: H@ppyD@yz:) - WEAK
+Missing: Number
+Password: KnockKnock_WhoDis? - WEAK
+Missing: Number
+Password: GoBigOrGoH0me! - STRONG
+Password: T0ugh_T!ger21 - STRONG
+Password: W3irdFlexButOk! - STRONG
+Password: SayMyNam3! - STRONG

@@ -1,0 +1,17 @@
+CGS3303, IT Concepts
+CIS3213, Foundations of Cybersecurity
+COP3515, Advanced Program Design for IT
+CIS3363, IT Systems Security
+CIS4219, Human Aspects of Cybersecurity
+CNT4104, Computer Information Networks for IT
+CNT4104L, Computer Information Networks for IT Lab
+COP4538, Data Structures and Algorithms for IT
+CEN3722, Human Computer Interfaces
+CNT4403, Network Security and Firewalls
+COP4703, Advanced Database Systems for IT
+CGS3853, Web Systems for IT
+CIS4200, Penetration Testing
+CIS4366, Hands-on Cybersecurity
+ISM4323, Information Security and IT Risk Management
+LIS4414, Information Policy and Ethics
+CIS4935, Senior Project for IT

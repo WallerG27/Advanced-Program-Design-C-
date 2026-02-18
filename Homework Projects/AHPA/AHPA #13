@@ -1,0 +1,83 @@
+/*This is a comment*/
+/*
+The Adding Machine
+ • You have decided that what the world needs is a better adding machine 
+and gosh darn it, you are going to create it!
+ • Create a program that forks itself.
+ • One part will ask the user to enter a number.
+ • The program will then use a pipe to pass that number to the copy of itself 
+that is running.
+ • The copy will then add 1 to the number that it has been passed.
+ • It will then pass the number back to the original program.
+ • The original program will then print out the number that it has received.
+ • Run this program for the following inputs: 500, -1, 7
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    //variables
+    int number;
+    int parentToChild[2];
+    int childToParent[2];
+
+    // Create pipes
+    if (pipe(parentToChild) == -1 || pipe(childToParent) == -1) {
+        perror("pipe");
+        exit(1);
+    }
+
+    // creates the fork
+    pid_t pid = fork();
+
+    if (pid == -1) {
+        perror("fork");
+        exit(1);
+    }
+
+    if (pid == 0) {
+        // Child process
+        // Close unused ends
+        close(parentToChild[1]);  // child doesn't write to this pipe
+        close(childToParent[0]);  // child doesn't read from this pipe
+
+        // Read number from parent
+        read(parentToChild[0], &number, sizeof(number));
+        close(parentToChild[0]);
+
+        // Add 1
+        number = number + 1;
+
+        // Send result back
+        write(childToParent[1], &number, sizeof(number));
+        close(childToParent[1]);
+
+        exit(0);
+    } else {
+        // Parent process
+        // Close unused ends
+        close(parentToChild[0]);  // parent doesn't read here
+        close(childToParent[1]);  // parent doesn't write here
+
+        // Get input from user  
+        printf("Input a number\n");
+        scanf("%d", &number);
+
+        // Write input to child
+        write(parentToChild[1], &number, sizeof(number));
+        close(parentToChild[1]);
+
+        wait(NULL); // Wait for child to finish
+
+        // Read result back
+        read(childToParent[0], &number, sizeof(number));
+        close(childToParent[0]);
+
+        printf("Output: %d\n", number);
+    }
+
+    return 0;
+}
